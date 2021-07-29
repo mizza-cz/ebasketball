@@ -1,0 +1,47 @@
+.footer{
+   .social{
+      justify-content: center;
+      padding-top: 30px;
+      a:hover{
+         svg{
+            transform: scale(0.8);
+         }
+      }
+      li:first-child{
+         margin-left: 0;
+      }
+      svg{
+         width: 27px;
+         height: 27px;
+         transition: all .3s;
+      }
+   }
+   div,a{
+      color: #838383;
+      font-weight: 300;
+      font-family: 'Teko', sans-serif;
+      font-size: 1.6875rem;
+      transition: all .3s;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 125%;
+      margin-bottom: 50px;
+      letter-spacing: 7.75px;
+      padding: 0 15px;
+   }
+   a:hover{
+      color: #fff;
+   }
+   &__logo{
+      width: 97px;
+      height: 97px;
+      margin: 0 auto;
+      margin-bottom: 65px;
+      padding: 0 !important;
+      img{
+         object-fit: cover;
+      }
+   }
+}
+

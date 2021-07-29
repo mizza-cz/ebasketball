@@ -1,0 +1,124 @@
+.header{
+   padding-top: 38px;
+   .hp-top__language{
+      display: none;
+   }
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+     
+   }
+   &__logo{
+      width: 77px;
+      height: 77px;
+      display: block;
+   }
+}
+.nav{
+   padding-top: 1rem;
+   margin: 0 auto;
+   &__menu{
+      display: flex;
+      li+li{
+         margin-left: 32px;
+      }
+      li{
+        width: 138px;
+        text-align: center;
+        .active{
+         color: $orange;
+         letter-spacing: 1px;
+        }
+         a{
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'Teko', sans-serif;
+            font-weight: 300;
+            font-size: 1.6875rem;
+            display: block;
+            letter-spacing: 0.46px;
+            transition: all .3s;
+            &:hover{
+               color: $orange;
+               letter-spacing: 1px;
+            }
+            
+         }
+      }
+   }
+}
+.social{
+   display: flex;
+   padding-top: 19px;
+   li{
+      margin-left: 55px;
+      a{
+         
+         display: block;
+         path{
+            transition: all .3s;
+         }
+         &:hover{
+            path{
+               fill: $orange;
+            }
+         }
+      }
+   }
+}
+
+/// burger
+.navbar__menu {
+   border-radius: 10px;
+   position: relative;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+   transition: all 0.5s ease-in-out;
+ }
+ .navbar__menu-btn {
+   width: 30px;
+   height: 4px;
+   background: $orange;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(255, 103, 47, 0.2);
+   transition: all 0.5s ease-in-out;
+ 
+   &::before,
+   &::after {
+     content: '';
+     position: absolute;
+     width: 30px;
+     height: 4px;
+     background: $orange;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(255, 103, 47, 0.2);
+     transition: all 0.5s ease-in-out;
+   }
+   &::before {
+     transform: translateY(-10px);
+   }
+   &::after {
+     transform: translateY(10px);
+   }
+ }
+ // animation media btn
+.navbar__menu.open .navbar__menu-btn {
+   transform: translateX(-50px);
+   background: transparent;
+   box-shadow: none;
+   &::before {
+     transform: rotate(45deg) translate(35px, -35px);
+   }
+   &::after {
+     transform: rotate(-45deg) translate(35px, 35px);
+   }
+ }
+ .mobil-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+ }
