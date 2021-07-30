@@ -338,7 +338,6 @@ form{
    }
  }
  label{
- 
     text-align: center;
     color: #fff;
     display: block;
@@ -353,7 +352,6 @@ form{
     font-size: 1.5rem;
     letter-spacing: 0.29px;
     line-height: 30px;
- 
     a{
        color: #fff;
        text-decoration: underline;
@@ -361,7 +359,6 @@ form{
  }
 
 .search__checkbox{
-   
    label{
       margin: 0;
       color: #818181;
@@ -371,7 +368,6 @@ form{
       margin-bottom: 5px;
       font-size: 1.5rem;
       font-weight: 700;
-      
       .shop__check{
          margin: 0;
          margin-right: 11px;
@@ -380,7 +376,6 @@ form{
             height: 19px;
          }
       }
-  
    }
    p{
       margin-left: 32px;
@@ -425,9 +420,6 @@ form{
         width: 8px;
         height: 8px;
       }
-    }
-    &.focused {
-      
     }
 }
 .form__btn{
@@ -580,8 +572,7 @@ form{
    top: 35%;
    margin: 0 auto;
 }
-.slick-list{
-}
+
 .slider__btnprev{
    transform: rotate(90deg);
    right: 780px;
