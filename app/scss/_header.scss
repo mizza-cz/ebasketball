@@ -19,6 +19,7 @@
    margin: 0 auto;
    &__menu{
       display: flex;
+      padding-left: 60px;
       li+li{
          margin-left: 32px;
       }

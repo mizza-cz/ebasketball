@@ -294,7 +294,7 @@
        flex-direction: column;
        
        position: absolute;
-       top: 75px;
+       top: 85px;
        align-items: center;
        text-align: center;
        padding-bottom: 16px;
@@ -303,6 +303,7 @@
     }
     .nav__menu{
        flex-direction: column;
+       padding-left: 0;
     }
 }
 @media(max-width: 540px){
