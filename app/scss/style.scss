@@ -629,4 +629,50 @@ form{
    }
 }
 
+
+.smoke-dialog{
+   width: 25%;
+}
+.smoke-dialog-buttons-ok, .smoke-dialog-buttons-cancel{
+   background-color: #f3f3f3;
+}
+.smoke-dialog-buttons-ok{
+   font-family: 'Teko', sans-serif;
+   font-weight: 700;
+   color: $orange;
+   font-size: 2rem;
+   font-family: 'Teko', sans-serif;
+   position: relative;
+   text-transform: uppercase;
+   letter-spacing: -0.29px;
+   transition: all .3s;
+   &:hover{
+      color: #00FF4E;
+      letter-spacing: 1.31px;
+      background-color: #f3f3f3;
+      &::before{
+         width: 122px;
+      }
+   }
+   &::before{
+      transition: all .3s;
+      content: '';
+      height: 1px;
+      width: 46px;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: $orange;
+      letter-spacing: -0.29px;
+      line-height: 102px;
+   }
+}
+.smoke-dialog{
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+}
+
+
 @import 'media';

@@ -51,22 +51,94 @@ $(function(){
       ]
     });
 });
-var form = document.querySelector('form');
-var inputs = document.querySelectorAll('input');
 
-form.onsubmit = function(e) {
-  var error = false;
+'use strict';
+document.addEventListener('DOMContentLoaded', function(){
+  const regForm = document.getElementById('regForm');
+  const searchForm = document.getElementById('searchForm');
+  regForm.addEventListener('submit', formSend);
+  searchForm.addEventListener('submit', formSend2)
 
-  for (var i = 0; i < inputs.length; i++) {
-    if (inputs[i].value == '') {
-      inputs[i].classList.add('error');
-      error = true
-    }
-    else {
-      inputs[i].classList.remove('error');
+  async function formSend(e){
+    e.preventDefault();
+    let error = formValidate(regForm);
+    if(error === 0){
+      smoke.alert ("Děkujeme!", function (result) {window.location = '';})
+      
+    }else{
+      smoke.alert ("Vyplňte tento formulář, prosím!", function (result) {window.location = '';})
     }
   }
-  if (error) {
-    e.preventDefalt();
+  async function formSend2(e){
+    e.preventDefault();
+    let error = formValidate2(searchForm);
+    if(error === 0){
+      smoke.alert ("Děkujeme!", function (result) {window.location = '';})
+      
+    }else{
+      smoke.alert ("Vyplňte tento formulář, prosím!", function (result) {window.location = '';})
+    }
   }
-}
+  function formValidate2(searchForm){
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+    for(let index = 0; index < formReq.length; index++){
+      const input = formReq[index];
+      input.classList.remove('_error');
+
+      if(input.classList.contains('_email')){
+        if(emailTest(input)){
+          formAddError(input);
+          error++;
+        }
+      } else if(input.getAttribute('type') === 'checkbox' && input.checked === false){
+        formAddError(input);
+        error++;
+      } else{
+        if(input.value === ''){
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+  function formValidate(regForm){
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+    for(let index = 0; index < formReq.length; index++){
+      const input = formReq[index];
+      input.classList.remove('_error');
+
+      if(input.classList.contains('_email')){
+        if(emailTest(input)){
+          formAddError(input);
+          error++;
+        }
+      } else if(input.getAttribute('type') === 'checkbox' && input.checked === false){
+        formAddError(input);
+        error++;
+      } else{
+        if(input.value === ''){
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+  function formAddError(input){
+    input.parentElement.classList.add('_error');
+    input.classList.add('_error');
+  }
+  function formRemoveError(input){
+    input.parentElement.classList.remove('_error');
+    input.classList.remove('_error');
+  }
+
+  function emailTest(input){
+    return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+  }
+});
+
+

@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>eBasketball open</title>
+   <link rel="stylesheet" href="css/smoke-pure.css">
    <link rel="stylesheet" href="https://use.typekit.net/xjc6zcs.css">
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,64 +131,58 @@
    <section id="registrace" class="registrace">
       <div class="registrace__tab">
          <ul class="tabs">
-            <li class="tab " data-id="1">
+            <li class="tab active" data-id="1">
                Registruj Tým
             </li>
-            <li class="tab active" data-id="2">
+            <li class="tab " data-id="2">
                hledám tým/hráče
             </li>
          </ul>
-         <div class="tab__content" id="1">
+         <div class="tab__content tab-active" id="1">
             <p>
                Registruj svůj tým na turnaj eBasketball 
                <br>
                Open 2021 ve hře NBA2K 2021 (5x5).
             </p>
-            <form class="registration form">
+            <form action="#" id="regForm" name="form" class="registration form">
              <div class="registration__row">
                <label class="label" for="">
-                  <input placeholder="tým" class="team" type="text">
+                  <input name="team" placeholder="tým" class="team _req" type="text">
                </label>
                <label class="label">
-                  <input placeholder="jméno" class="name" type="text">
+                  <input placeholder="jméno" name="name" class="name _req" type="text">
                </label>
              
                <label class="label">
-                  <input placeholder="příjmení" class="surname" type="text">
+                  <input placeholder="příjmení" name="surname" class="surname" type="text">
                </label>
                
                
                <label class="label--right label" for="">
-                  <input placeholder="nickname" class="nickname" type="text">
+                  <input placeholder="nickname" name="nickname" class="nickname" type="text">
                </label>
                
              </div>
              <div class="registration__row">
                 
                   <label class="label">
-                    <input id="email" placeholder="e-mail" class="email" type="email">
+                    <input id="email" placeholder="e-mail" name="email" class="email _req _email" type="email">
                   </label>
                   <label class="label">
-                   <input placeholder="datum narození" class="datum" type="text">
+                   <input placeholder="datum narození" name="narozky" class="datum" type="text">
                   </label>
+               
               
                <select name="state" id="state">
-                  <option>národnost</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
-                  <option>národnost 1</option>
+                  <option value="1">národnost</option>
+                  <option value="2">národnost 1</option>
+                  <option value="3">národnost 1</option>
+                  <option value="4">národnost 1</option>
+                  <option value="5">národnost 1</option>
+                  <option value="6">národnost 1</option>
                </select>
                <label class="label--right label" for="">
-                   <input placeholder="playstation id" class="id" type="text" >
+                   <input placeholder="playstation id" class="id" name="id" type="text" >
                </label>
               
              </div>
@@ -200,7 +195,7 @@
                   </a>
                   
                </label>
-               <input required class="shop__check" id="souhlas" type="checkbox">
+               <input  class="shop__check _req" id="souhlas" type="checkbox">
                <label for="subscrb">
                   Chci vědět jako první o akcích ze světa eBasketballu a dalších souvisejících akcích i nabídkách. Uděluji tímto souhlas se 
                   <a href="#">
@@ -208,25 +203,25 @@
                   </a>
                 
                </label>
-               <input required class="shop__check" id="subscrb" type="checkbox">
+               <input  class="shop__check _req" id="subscrb" type="checkbox">
                <button class="form__btn">odeslat</button>
             </form>
          </div>
-         <div class="tab__content tab-active" id="2">
+         <div class="tab__content" id="2">
             <p>
                NEMÁŠ JEŠTĚ SVŮJ TÝM NEBO HLEDÁŠ DALŠÍ HRÁČE DO TÝMU? REGISTRUJ SE
                <br>
                A MY TI POMŮŽEME NAJÍT SPOLUHRÁČE PRO EBASKETBALL OPEN.
             </p>
-            <form class="search form">
+            <form id="searchForm" name="form" class="search form">
                <div class="registration__row">
                 <div class="search__checkbox">
                   <label class="search-team" for="search-team">
-                     <input class="shop__check" name="search-team" id="search-team" type="checkbox">  
+                     <input class="shop__check _req" name="search" value="" id="search-team" type="radio">  
                      HLEDÁM TÝM</label>
                     
                     <label for="search-player">
-                       <input class="shop__check" type="checkbox" name="search-player" id="search-player">
+                       <input class="shop__check _req" type="radio" checked name="search" id="search-player">
                      DALŠÍ SPOLUHRÁČE DO TÝMU
                    
                     </label>
@@ -235,43 +230,30 @@
                   </p>
                 </div>
                   <label class="label">
-                     <input placeholder="jméno" class="name" type="text">
+                     <input placeholder="jméno" class="name _req" type="text">
                   </label>
                   <label class="label">
-                     <input placeholder="příjmení" class="surname" type="text">
+                     <input placeholder="příjmení" class="surname _req" type="text">
                   </label>
                  <label class="label--right label">
                   <input placeholder="nickname" class="nickname" type="text">
                  </label>
                 </div>
                 <div class="registration__row">
-                  <label class="label--width label" for="email">
+                  <label class="label--width label" for="email _req">
                      <input id="email" placeholder="e-mail" class="email" type="email">
                     </label>
                  <label class="label">
                   <input placeholder="datum narození" class="datum" type="text">
                  </label>
                   <select name="state" id="state">
-                     <option>národnost</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
-                     <option>národnost 1</option>
+                     <option value="1">národnost</option>
+                     <option value="2">národnost 1</option>
+                     <option value="3">národnost 1</option>
+                     <option value="4">národnost 1</option>
+                     <option value="5">národnost 1</option>
+                     <option value="6">národnost 1</option>
+                    
                   </select>
                 <label class="label--right label" for="">
                   <input placeholder="playstation id" class="id" type="text" >
@@ -286,7 +268,7 @@
                      </a>
                      
                   </label>
-                  <input required class="shop__check" id="souhlas" type="checkbox">
+                  <input  class="shop__check" id="souhlas" type="checkbox">
                   <label for="subscrb">
                      Chci vědět jako první o akcích ze světa eBasketballu a dalších souvisejících akcích i nabídkách. Uděluji tímto souhlas se 
                      <a href="#">
@@ -294,7 +276,7 @@
                      </a>
                    
                   </label>
-                  <input required class="shop__check" id="subscrb" type="checkbox">
+                  <input  class="shop__check" id="subscrb" type="checkbox">
                   <button class="form__btn">odeslat</button>
             </form>
          </div>
@@ -418,15 +400,16 @@
             </a>
          </li>
       </ul>
+     
    </footer>
-   
-
-
+  
+  
 
 
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="js/libs.min.js"></script>
+   <script src="js/smoke-pure.js"></script>
    <script src="js/main.js"></script>
 </body>
 
