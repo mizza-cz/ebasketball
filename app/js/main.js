@@ -30,45 +30,43 @@ $(function(){
       return false;
     });
     $('.slider__inner').slick({
-      prevArrow: '<button class="slider__btn slider__btnprev"><img src="images/svg/angle-down.svg" alt="" ></button> ',
+      prevArrow: '<div class="slick-current"><button class="slider__btn slider__btnprev"><img src="images/svg/angle-down.svg" alt="" ></button></div> ',
       nextArrow: ' <button class="slider__btn slider__btnnext"><img src="images/svg/angle-down.svg" alt = "" ></button > ',
       centerMode: true,
-      // infinite: false,
-      slidesToScroll: 1,
+      centerPadding: '0px',
       slidesToShow: 3,
-      variableWidth: true,
       responsive: [
-        {
-         breakpoint: 899,
-         settings: {
-         
-           arrows: true,
-           slidesToShow: true,
-           slidesToScroll: 1,
-         }
-       },
+      
        {
          breakpoint: 739,
          settings: {
-            variableWidth: true,
-            centerMode:true,
+          centerMode:true,
            arrows: false,
            dots:true,
-           slidesToShow: true,
-           slidesToScroll: 1,
+           slidesToShow:1,
+           centerPadding: '0px',
          }
        },
-       {
-         breakpoint: 439,
-         settings: {
-            variableWidth: true,
-            centerMode:true,
-           arrows: false,
-           dots:true,
-           slidesToShow: true,
-           slidesToScroll: 1,
-         }
-       }
+     
       ]
     });
 });
+var form = document.querySelector('form');
+var inputs = document.querySelectorAll('input');
+
+form.onsubmit = function(e) {
+  var error = false;
+
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].value == '') {
+      inputs[i].classList.add('error');
+      error = true
+    }
+    else {
+      inputs[i].classList.remove('error');
+    }
+  }
+  if (error) {
+    e.preventDefalt();
+  }
+}
