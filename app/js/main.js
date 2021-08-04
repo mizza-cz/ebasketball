@@ -16,8 +16,6 @@ $(function(){
      );
      return false;
    });
-
-
    // tabs
    $('.registrace__tab .tab').on('click', function (event) {
       var id = $(this).attr('data-id');
@@ -142,3 +140,112 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
+/// input value --> add class registiruj tym
+var uiField = document.getElementsByClassName('team')[0];
+var uiField2 = document.getElementsByClassName('name')[0];
+var uiField3 = document.getElementsByClassName('surname')[0];
+var uiField4 = document.getElementsByClassName('nickname')[0];
+var uiField5 = document.getElementsByClassName('email')[0];
+var uiField6 = document.getElementsByClassName('datum')[0];
+var uiField7 = document.getElementsByClassName('id')[0];
+uiField.addEventListener('keyup', function () {
+    if (uiField.value.length >= 1) {
+        uiField.classList.add('input-active');
+    }else{   
+        uiField.classList.remove('input-active');
+    }
+})
+uiField2.addEventListener('keyup', function () {
+    if (uiField2.value.length >= 1) {
+        uiField2.classList.add('input-active');
+    }else{   
+        uiField2.classList.remove('input-active');
+    }
+})
+uiField3.addEventListener('keyup', function () {
+    if (uiField3.value.length >= 1) {
+        uiField3.classList.add('input-active');
+    }else{   
+        uiField3.classList.remove('input-active');
+    }
+})
+uiField4.addEventListener('keyup', function () {
+    if (uiField4.value.length >= 1) {
+        uiField4.classList.add('input-active');
+    }else{   
+        uiField4.classList.remove('input-active');
+    }
+})
+uiField5.addEventListener('keyup', function () {
+  if (uiField5.value.length >= 1) {
+      uiField5.classList.add('input-active');
+  }else{   
+      uiField5.classList.remove('input-active');
+  }
+})
+uiField6.addEventListener('keyup', function () {
+  if (uiField6.value.length >= 1) {
+      uiField6.classList.add('input-active');
+  }else{   
+      uiField6.classList.remove('input-active');
+  }
+})
+uiField7.addEventListener('keyup', function () {
+  if (uiField7.value.length >= 1) {
+      uiField7.classList.add('input-active');
+  }else{   
+      uiField7.classList.remove('input-active');
+  }
+})
+
+// input value --> add class search tym
+
+var uiField9 = document.getElementsByClassName('name2')[0];
+var uiField10 = document.getElementsByClassName('surname2')[0];
+var uiField11 = document.getElementsByClassName('nickname2')[0];
+var uiField12 = document.getElementsByClassName('email2')[0];
+var uiField13 = document.getElementsByClassName('datum2')[0];
+var uiField14 = document.getElementsByClassName('id2')[0];
+
+uiField9.addEventListener('keyup', function () {
+  if (uiField9.value.length >= 1) {
+    uiField9.classList.add('input-active');
+  }else{   
+    uiField9.classList.remove('input-active');
+  }
+})
+uiField10.addEventListener('keyup', function () {
+  if (uiField10.value.length >= 1) {
+    uiField10.classList.add('input-active');
+  }else{   
+    uiField10.classList.remove('input-active');
+  }
+})
+uiField11.addEventListener('keyup', function () {
+  if (uiField11.value.length >= 1) {
+    uiField11.classList.add('input-active');
+  }else{   
+    uiField11.classList.remove('input-active');
+  }
+})
+uiField12.addEventListener('keyup', function () {
+  if (uiField12.value.length >= 1) {
+    uiField12.classList.add('input-active');
+  }else{   
+    uiField12.classList.remove('input-active');
+  }
+})
+uiField13.addEventListener('keyup', function () {
+  if (uiField13.value.length >= 1) {
+    uiField13.classList.add('input-active');
+  }else{   
+    uiField13.classList.remove('input-active');
+  }
+})
+uiField14.addEventListener('keyup', function () {
+  if (uiField14.value.length >= 1) {
+    uiField14.classList.add('input-active');
+  }else{   
+    uiField14.classList.remove('input-active');
+  }
+})

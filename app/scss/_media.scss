@@ -245,7 +245,10 @@
    }
 }
 @media(max-width:660px){
-
+   .tab{
+      font-size: 1.6rem;
+      margin: 0 16px;
+   }
    .partners__item{
       a{
          max-width: 100%;
@@ -319,6 +322,28 @@
       margin-bottom: 64px;
    }
 }
+@media(max-width:480px){
+   .search__checkbox p{
+      font-size: 0.8rem !important;
+      line-height: 20px !important;
+   }
+   .search__checkbox label{
+      font-size: 1.2rem;
+   }
+   .souhlas{
+      padding-top: 80px;
+   }
+   .tabs{
+      display: block;
+      text-align: center;
+   }
+   label,
+   .tab__content p{
+      font-size: 1rem;
+      line-height: 26px;
+   }
+   
+}
 @media(max-width:440px){
    .slick-slide.slick-current .slider__item .slider__info h2{
       font-size: 2rem;
@@ -343,5 +368,10 @@
    .footer div, .footer a{
       letter-spacing: 4.3px;
       margin-bottom: 30px;
+   }
+}
+@media(max-width:340px){
+   .search__checkbox label{
+      font-size: 1rem;
    }
 }
