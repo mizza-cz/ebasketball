@@ -680,7 +680,15 @@ input.input-active{
 .smoke-dialog{
    font-family: 'Roboto', sans-serif;
    font-weight: 300;
+   max-width: 480px;
+   width: 100%;
+}
+.smoke-dialog_wrapper{
+   padding: 0 20px;
 }
 
+.smoke-base{
+   position: fixed;
+}
 
 @import 'media';
