@@ -65,10 +65,11 @@
       flex-wrap: wrap;
       margin-bottom: 0;
    }
-   
-   .label,
-   .jq-select-multiple, .jq-selectbox{
-      margin-left: 32px !important;
+   form .jq-selectbox__dropdown{
+      width: 220px !important;
+   }
+   .label{
+     
       margin-bottom: 32px !important;
    }
    .label--right input{
