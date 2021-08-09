@@ -357,7 +357,7 @@ form{
        text-decoration: underline;
     }
  }
-input.input-active{
+.label-active input{
    border-color: #00FF4E;
 }
 
@@ -558,7 +558,8 @@ input.input-active{
 .partners{
    &__inner{
       display: flex;
-      flex-wrap: wrap
+      flex-wrap: wrap;
+      align-items: center;
    }
    &__item{
       margin-bottom: 150px;
@@ -571,20 +572,15 @@ input.input-active{
          margin: 0 auto;
          
          &:hover{
-            svg{
-               path{
-                  fill: #fff;
-               }
+            img{
+               opacity: 1;
             }
          }
-         svg{
-            path{
-               transition: all .3s;
-               fill: #7E7E7E;
-            }
-         }
+       
          img{
-           object-fit: cover 
+            transition: all .3s;
+           object-fit: cover;
+           opacity: .6;
          }
       }
    }
