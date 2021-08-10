@@ -263,6 +263,9 @@ form{
          }
       }
    }
+   input[type="date"]{
+      color: #A0A0A0 !important;
+   }
    input:valid{
       color: #fff;
       
@@ -360,7 +363,9 @@ form{
 .label-active input{
    border-color: #00FF4E;
 }
-
+.label-active  input[type="date"]{
+   color: #fff !important;
+}
 
 .shop__check{
    background-color: transparent;
