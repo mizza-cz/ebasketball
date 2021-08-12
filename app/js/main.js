@@ -31,10 +31,58 @@ $(function(){
       prevArrow: '<div class="slick-current"><button class="slider__btn slider__btnprev"><img src="images/svg/angle-down.svg" alt="" ></button></div> ',
       nextArrow: ' <button class="slider__btn slider__btnnext"><img src="images/svg/angle-down.svg" alt = "" ></button > ',
       centerMode: true,
-      centerPadding: '0px',
-      slidesToShow: 3,
+      centerPadding: '500px',
+      slidesToShow: 1,
+      infinite:true,
       responsive: [
-      
+        {
+          breakpoint: 1600,
+          settings: {
+           centerMode:true,
+            slidesToShow:1,
+            centerPadding: '430px',
+          }
+        },
+        {
+          breakpoint: 1400,
+          settings: {
+           centerMode:true,
+            slidesToShow:1,
+            centerPadding: '400px',
+          }
+        },
+        {
+          breakpoint: 1300,
+          settings: {
+           centerMode:true,
+            slidesToShow:1,
+            centerPadding: '350px',
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+           centerMode:true,
+            slidesToShow:1,
+            centerPadding: '300px',
+          }
+        },
+        {
+          breakpoint: 1100,
+          settings: {
+           centerMode:true,
+            slidesToShow:1,
+            centerPadding: '200px',
+          }
+        },
+        {
+          breakpoint: 1400,
+          settings: {
+           centerMode:true,
+            slidesToShow:1,
+            centerPadding: '0px',
+          }
+        },
        {
          breakpoint: 739,
          settings: {
@@ -178,3 +226,19 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 
+let form = document.getElementById('regForm');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    let err = false;
+    let requiredInput = document.querySelectorAll('#regForm input:not(.build)');
+    for (const input of requiredInput) {
+        let formWrapper = input.closest('.formular');
+        if (formWrapper !== null && formWrapper.style.display !== 'none' && input.value == '') {
+            console.log('Nevyplnili jste' + input);
+            err = true;
+        }
+    }
+    if (err !== true) {
+        form.submit();
+    }
+});
